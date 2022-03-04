@@ -17,13 +17,10 @@ public class checkService extends HttpServlet {
 	
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		//0.인코딩
 		request.setCharacterEncoding("utf-8");
-		
-		//1.파라미터 수집
+
 		String id = request.getParameter("id");
 		
-		//2. DAO 사용
 		MemberDAO dao = new MemberDAO();
 		
 		MemberVO vo = dao.idCheck(id);
@@ -31,9 +28,7 @@ public class checkService extends HttpServlet {
 		response.setCharacterEncoding("utf-8");
 		
 		PrintWriter out = response.getWriter();
-		
-		// vo가 비어있으면 out.print(true); --> 사용가능한 이메일
-		// vo가 비어있지 않으면 out.print(false); --> 중복된 이메일
+
 		out.print( vo == null );
 				
 		

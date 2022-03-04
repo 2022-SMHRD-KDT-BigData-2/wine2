@@ -9,12 +9,8 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 public class BoardDAO {
-	// 기존의 dao 모든 메서드에서 connection 생성 -> psmt 생성
-	// sqlSessionFactory : connection을 미리 만들어둠 -> 사용할 때 빌려가기만
 	private static SqlSessionFactory sqlSessionFactory;
 	
-	// 초기화 블럭 --> 기본적으로 생성자가 실행되기 직전
-	// static 초기화 블럭 --> static 변수들이 메모리에 올라간 순간 
 	static {
 		
 		try {
