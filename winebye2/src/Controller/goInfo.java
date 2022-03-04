@@ -20,7 +20,7 @@ public class goInfo extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-	
+		request.setCharacterEncoding("euc-kr");
 		String name = request.getParameter("info_name");
 
 		WineDAO dao = new WineDAO();
