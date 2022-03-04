@@ -34,7 +34,7 @@
   </dependencies>
   
   <build>
-  
+  <finalName>winebye2</finalName>
   <pluginManagement>
     <plugins>
     <!-- 서버 배포 셋팅 -->
