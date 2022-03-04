@@ -18,17 +18,17 @@ public class goViewBoard extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// 1. 파라미터 수집
+
 		int num = Integer.parseInt(request.getParameter("num"));
 		
-		// 2. DAO 메서드 사용
+
 		BoardDAO dao = new BoardDAO();
 		BoardVO bvo = dao.viewBoard(num);
 		
-		// 3. request scope에 저장
+
 		request.setAttribute("bvo", bvo);
 		
-		// 4. 포워드방식으로 페이지 이동
+	
 		RequestDispatcher rd = request.getRequestDispatcher("viewBoard.jsp");
 		rd.forward(request, response);
 	}

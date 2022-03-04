@@ -35,7 +35,7 @@ public class MypageService extends HttpServlet {
 		
 
 		MemberVO vo = new MemberVO(id,pw, birth, gender, email, favorite);
-		//2. DAO에 넘겨줘서 DB에 저장
+
 		
 		MemberDAO dao = new MemberDAO();
 		
@@ -47,13 +47,13 @@ public class MypageService extends HttpServlet {
 		if( cnt >0) {
 			session.setAttribute("vo",vo);
 			out.println("<script>");
-			out.println("alert('회원정보수정에 성공 하였습니다.')");
+			out.println("alert('sucess')");
 			out.print("location.href = 'index.jsp';");
 			out.println("</script>");
 		}else {
 			
 			out.println("<script>");
-			out.println("alert('회원정보수정에 실패 하였습니다.')");
+			out.println("alert('fail')");
 			out.print("location.href = 'Mypage.jsp';");
 			out.println("</script>");
 			

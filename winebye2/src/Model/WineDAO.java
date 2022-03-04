@@ -11,8 +11,7 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 public class WineDAO {
 private static SqlSessionFactory sqlSessionFactory;
 	
-	// 초기화 블럭 --> 기본적으로 생성자가 실행되기 직전
-	// static 초기화 블럭 --> static 변수들이 메모리에 올라간 순간 
+
 	static {
 		
 		try {
