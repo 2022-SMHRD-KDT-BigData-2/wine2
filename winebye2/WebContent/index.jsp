@@ -34,7 +34,7 @@
 
 								<!-- Nav -->
 									<nav id="nav">
-										
+										a
 										<a href="goRecommend">와인추천</a>
 										<a href="twocolumn1.html">와인백과사전</a>
 										<a href="goBoardMain">게시판d</a>
